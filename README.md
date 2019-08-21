@@ -1,4 +1,5 @@
 
+
 # BugTracker - Form Consulta Bugs
 
 
@@ -22,36 +23,35 @@ $ git push --set-upstream origin branch_{{legajo}}
 ```
 
 ## 2. Ejecutar Script Base de datos
-**2.3. Ejecutar Script `BugTracker_DB.sql`**
+**2.1. Iniciar la aplicación `Sql Server Management Studio`**
 
-> Editar el archivo BugTracker_DB.sql y reemplazar el nombre de la base de datos BugTracker, agregando el numero de legajo de la siguiente forma:
+Solicitará ingresar los datos de la base de datos para generar una conexión, completar los datos y hacer click en **Connect**. Los datos del servidor del labsis son:
+
+ - **Tipo Servidor:** Database Engine
+ - **Nombre Servidor:** maquis
+ - **Autenticación:** SQL Server Authentication.
+ - **Nombre de Usuario:** avisuales1
+ - **Contraseña:** ******
+ 
+ 
+ **2.2. Abrir archivo `BugTracker_DB.sql`**
+ Ir a la opción `Archivo -> Abrir -> Archivo` (o combinación de teclas `Ctrl + O`) y buscar el archivo BugTracker_DB.sql en el disco local.
+  
+**2.3. Editar Script** 
+> Antes de ejecutar editar el archivo BugTracker_DB.sql y reemplazar el nombre de la base de datos BugTracker, agregando el numero de legajo de la siguiente forma:
 >  `BugTracker_{{legajo}}`
 
-```sql
-USE [master]
--- Importante!!!!!! Reemplazar nombre de base de datos con formato BugTracker_{{legajo}} 
-CREATE DATABASE [BugTracker]
-GO
--- Importante!!! Reemplazar nombre de base de datos con formato BugTracker_{{legajo}}
-USE [BugTracker]
-GO
-/****** Object:  Table [dbo].[Bugs]    Script Date: 20/8/2019 22:43:37 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Bugs](
-...
-```
+**2.4. Ejecutar Script** 
+Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla `F5`)
+
 ## 3. Menú
 
 
+
+## 4. Agregar Form ConsultaBugs
+
+    
 ```csharp
 
 ```
-
-## 4. ComboBox
-
-## 5. Agregar Form ConsultaBugs
-
-    
+## 5. ComboBox
